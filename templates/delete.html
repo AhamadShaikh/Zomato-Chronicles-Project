@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            width: 60%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px #ddd;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #FF4500;
+            /* Red-Orange color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #FF0000;
+            /* Red color */
+
+        }
+
+        input {
+            height: 20px;
+        }
+
+        #cancel-btn {
+            background-color: #43A047;
+            color: white;
+        }
+
+        #cancel-btn:hover {
+            background-color: #2E7D32;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Delete Entry</h1>
+    <label for="entry">Select Entry to Delete:</label>
+    <form method="post" action="/delete">
+        Enter Key :
+        <input type="text" name="key" required>
+        <button type="submit">Delete Entry</button>
+        <button id="cancel-btn" type="submit"><a href="/">Cancel</a></button>
+    </form>
+</body>
+
+</html>

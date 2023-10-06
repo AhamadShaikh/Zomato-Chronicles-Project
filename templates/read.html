@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .create-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .create-button:hover {
+            background-color: #0056b3;
+        }
+
+        .delete-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: red;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .delete-button:hover {
+            background-color: brown;
+        }
+
+        .update-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #43A047;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .update-button:hover {
+            background-color: #2E7D32;
+        }
+        .buttons{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key, value in data.items() %}
+            <tr>
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="buttons">
+        <a class="create-button" href="./create">Create New Entry</a>
+        <a class="update-button" href="./update">Update Entry</a>
+        <a class="delete-button" href="./delete">Delete Entry</a>
+    </div>
+</body>
+
+</html>
